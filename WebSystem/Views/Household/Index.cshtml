@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebSystem.Models.Household>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="AddHousehold" class="btn btn-success">Create New</a>
+</p>
+<table class="table table-striped table-bordered" id="household">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HouseholdId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPeople)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Standmeter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LpgConsumption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityGasConsumption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+</table>
+
+<script type="text/javascript">
+    var UrlHousehold = '@Url.Action("GetList", "Household")';
+</script>

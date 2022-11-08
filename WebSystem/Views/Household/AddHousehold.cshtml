@@ -1,0 +1,55 @@
+﻿@model WebSystem.Models.Household
+
+@{
+    ViewData["Title"] = "AddHousehold";
+}
+
+<h1>AddHousehold</h1>
+
+<h4>Household</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddHousehold">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HouseholdId" class="control-label"></label>
+                <input asp-for="HouseholdId" class="form-control" />
+                <span asp-validation-for="HouseholdId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AmountPeople" class="control-label"></label>
+                <input asp-for="AmountPeople" class="form-control" />
+                <span asp-validation-for="AmountPeople" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Standmeter" class="control-label"></label>
+                <input asp-for="Standmeter" class="form-control" />
+                <span asp-validation-for="Standmeter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LpgConsumption" class="control-label"></label>
+                <input asp-for="LpgConsumption" class="form-control" />
+                <span asp-validation-for="LpgConsumption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CityGasConsumption" class="control-label"></label>
+                <input asp-for="CityGasConsumption" class="form-control" />
+                <span asp-validation-for="CityGasConsumption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
